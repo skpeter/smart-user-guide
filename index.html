@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.M.A.R.T. User Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>S.M.A.R.T. User Guide</h1>
+        <p class="mb-5"><small><em>Smash Match Auto Reporter Thing</em></small></p>
+        
+        <nav id="toc" class="mb-4">
+            <h4>Table of Contents</h4>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#introduction">Introduction</a></li>
+                <li class="list-group-item"><a href="#installation">Installation and Setup</a></li>
+                <li class="list-group-item"><a href="#usage">Usage</a></li>
+                <li class="list-group-item"><a href="#features">Additional Features and Tips</a></li>
+                <li class="list-group-item"><a href="#troubleshooting">Potential Issues and Troubleshooting</a></li>
+                <li class="list-group-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <section id="installation" class="mb-5">
+            <h2>Installation and Setup</h2>
+            <h4>Installing the App</h4>
+            <p>Installing and setting up S.M.A.R.T. for the first time takes a bit of work but is relatively simple. First you need to get the S.M.A.R.T. app.</p>
+            <p>As of this writing, the app is on private early access through the <a href="https://ko-fi.com/teampolygon">monthly subscription here (https://ko-fi.com/teampolygon)</a>.</p>
+            <p>No subsequent monthly payments are required to continue using the app. You should only continue paying for the subscription if you'd like to support future updates to this project and to receive dedicated support.</p>
+            <p>Once subscribed, you will get access to the download link on our <a href="https://discord.gg/zecMKvF8b5">Discord server (https://discord.gg/zecMKvF8b5)</a>.</p>
+            <p>The app currently is only tested on Windows, but should also work on Linux and MacOS - if this is your case, you can contact us on the above Discord server before subscribing to help us test on those platforms.</p>
+            <h4>Setting up config.ini</h4>
+            <p>Alongside the app executable you will find a file called "config.ini".</p>
+            <p>This file contains settings that usually only need to be defined once. Some of them need to be set before using the app in its full capacity.</p>
+            <p>Here's a description on all of them:</p>
+            <p><img src="img/config.jpg" class="img-thumbnail mx-auto d-block" alt="How the config.ini file looks like"></p>
+            <ul>
+                <li><kbd>provider</kbd> - <span class="text-info">All fields on this section are meant to be default values for when the app opens and can be left blank.</span></li>
+                <ul>
+                    <li><kbd>name</kbd>: Name of the data provider you want to use every time the app opens. Needs to be a supported data provider. Currently supported values are <kbd>ReFramed</kbd> and <kbd>smush_info</kbd>.</li>
+                    <li><kbd>url</kbd>: Default value for URL or IP Address of the console where the data will come from.</li>
+                </ul>
+                <li><kbd>tournament</kbd> - <span class="text-info">All fields on this section are meant to be default values for when the app opens and can be left blank.</span></li></li>
+                <ul>
+                    <li><kbd>url</kbd>: URL of the event where data will be reported to on start.gg by default. For recurring events, you could set a URL here and then quickly change the event number on next weeks/months.</li>
+                    <li><kbd>identifier</kbd>: Identifier for which setup this instance of S.M.A.R.T. reports to on start.gg by default. Can be a stream name or a station number.</li>
+                    <li><kbd>best_of</kbd>: Default value for how many games a set should go to in order to determine a winner. This can change dynamically based on the start.gg phase - check <a href="#features">Additional Features and Tips</a> for how.</li>
+                </ul>
+                <li><kbd>startgg</kbd> - <span class="text-danger">All fields on this section need to be filled so the app is able to report results to start.gg.</span></li></li>
+                <ul>
+                    <li><kbd>token</kbd>: Your start.gg developer token which is tied to your account. <a href="https://developer.start.gg/docs/authentication/">Click here to learn how to get a developer token (https://developer.start.gg/docs/authentication/)</a>.</li>
+                    <li><kbd>only_get_called_sets</kbd>: Whether or not S.M.A.R.T. should only look for sets that were marked as "Called" on start.gg at that stream/station before reporting a result. Default value is <kbd>false</kbd> to detect any set.</li>
+                </ul>
+                <li><kbd>startgg</kbd> - <span class="text-danger">Filling these fields is required if you want to integrate S.M.A.R.T. into OBS to automate scene transitions.</span></li></li>
+                <ul>
+                    <li><kbd>host</kbd>: IP Address of the device where OBS is being run. If this device is the same S.M.A.R.T. is being run, use the default value <kbd>localhost</kbd>.</li>
+                    <li><kbd>port</kbd>: Port where OBS is listening for requests. This is <kbd>4455</kbd> by default.</li>
+                    <li><kbd>password</kbd>: Password you have set up on OBS-Websockets for external apps to access OBS. Setting up a password is recommended, but if you haven't done so, you can leave this field blank.</li>
+                    <ul>
+                        <li>To set up a password for OBS-Websockets, Open OBS, go to the Tools Tab, then click on Websocket Server Settings.</li>
+                        <li>This is also where you must enable Websocket server for S.M.A.R.T. to access OBS from if you've never done so.</li>
+                    </ul>
+                    <li><kbd>ingame_scene</kbd>: Scene to which S.M.A.R.T. should change to when any match starts (whether it's a tournament set or not).</li>
+                    <li><kbd>game_end_scene</kbd>: Scene to which S.M.A.R.T. should change to when any match ends (whether it's a tournament set or not).</li>
+                    <li><kbd>set_end_scene</kbd>: Scene to which S.M.A.R.T. should change to when a tournament set ends (after transition to game end scene happens).</li>
+                    <li><kbd>set_end_scene_delay</kbd>: How many seconds S.M.A.R.T. must wait before changing from game end scene to set end scene.</li>
+                    <li><kbd>enable_replays</kbd>: Defines if S.M.A.R.T. should use OBS to record key moments in the game to show as a replay later <span class="text-danger">(This feature is not out yet)</span>.</li>
+                </ul>
+            </ul>
+            <p>After going through all the settings on config.ini you should be good to go to open the app.</p>
+            <h4>Installing Data Providers</h4>
+            <p>After downloading the app, you must also get one of the supported data providers. For Smash Bros. Ultimate, these are mods you install on your Nintendo Switch.</p>
+            <p>Once you open S.M.A.R.T. the app will show you the avaiable ones and how to install them.</p>
+            <p>Here's some additional information on how to use the data providers with S.M.A.R.T.:</p>
+            <ul>
+                <li><strong>ReFramed</strong>: S.M.A.R.T. receives data through the ReFramed app. Once you've downloaded, installed the app and connected it to your Nintendo Switch, you must enable the Statistics plugin. On the plugin go to the "Settings and Export" tab and make sure the Websocket Server is active. <em>Your provider URL/IP is the IP Address of your machine on the specified port. If you're running multiple S.M.A.R.T. and ReFramed, be sure to specify a different port than the default (1337) then add the port number at the end of the IP Address (example: 127.0.0.1:1336).</em></li>
+                <li><strong>smush_info</strong>: No additional setup is required but the console needs to be connected to the same network as the computer S.M.A.R.T. is running on before the game starts. <em>Your provider URL/IP is the IP Address of the Nintendo Switch. You can find out which IP Address your Switch is on by accessing the Internet section on the console settings.</em></li>
+            </ul>
+            <p>Once that's done, you should be good to go!</p>
+        </section>
+        
+        <section id="usage" class="mb-5">
+            <h2>Usage</h2>
+            <h4>Connecting to the Console</h4>
+            <p>This is how S.M.A.R.T. looks like once you open it:</p>
+            <p><img src="img/app.jpg" class="img-thumbnail mx-auto d-block" alt="How the S.M.A.R.T. app looks like when you launch it"></p>
+            <p>If you set up your config.ini file prior to this step, all of these fields should be mostly set up. We'll go through them all anyway:</p>
+            <ul>
+                <li><code>Best Of</code>: How many games a set should go to in order to determine a winner. This can change dynamically based on the start.gg phase - check <a href="#features">Additional Features and Tips</a> for how.</li>
+                <li><code>Tournament/Event URL</code>: URL of the tournament where data will be reported to on start.gg. An example would be: <a href="https://www.start.gg/tournament/smash-station-87-1/event/cps-nextgen">https://www.start.gg/tournament/smash-station-87-1/event/cps-nextgen</a>. The event part of the URL is required if working with stations instead of a stream.</li>
+                <li><code>Stream/Station</code>: Which setup this instance of S.M.A.R.T. should report to on start.gg. Can be a stream name or a station number.</li>
+                <li><code>Game Data Provider</code>: Select the data provider you want to use. Once a provider is selected, the app will show you what you can or can not do with it, alongside a link to download and install it.</li>
+                <li><code>Provider URL/Ip Addr.</code>: URL or IP Address of the console where the data will come from.</li>
+                <li><code>Enable OBS functions?</code>: Set whether the S.M.A.R.T. app will interact with OBS. OBS settings must be defined on <code>config.ini</code> before enabling.</li>
+                <li><code class="text-success">Connect</code>: Connect to the console / data provider.</li>
+                <li><code class="text-success">Swap Players</code>: Manually swap the results of the match being played between players.</li>
+            </ul>
+            <p>Once clicking on <code class="text-success">Connect</code>, the app will connect to the console in order to receive data. The console must be on the same network as the computer where S.M.A.R.T. is being run.</p>
+            <p>If having both devices on the same network is an issue, we recommend setting up a WiFi Hotspot on the computer to which the console can connect to.</p>
+            <h4>Getting Matches to be Reported</h4>
+            <p>You must indicate to S.M.A.R.T. which matches are to be played on the stream or station before they happen. This is intentional to minimize the possibility of data being reported to other matches by accident.</p>
+            <p>In order to do so, you must first register your stream and stations you will use with S.M.A.R.T. In order to do this, go to your tournament's admin settings and open the "Stations & Streams" page.</p>
+            <p>This is how this page should look like once you set up your stream and/or stations:</p>
+            <p><img src="img/stream-setup.jpg" class="img-thumbnail mx-auto d-block" alt="Example of a start.gg stations & streams page should look"></p>
+            <p>Click on <strong>Add Stream</strong> to add the stream for your tournament, and <strong>Create Station</strong> to add stations to it. You only need to add the number of stations you feel you'll be able to use with S.M.A.R.T. If you're only using it with a stream setup, creating stations is not needed.</p>
+            <p>Then, once your tournament starts, you must indicate to S.M.A.R.T. which set is to be played on the stream or setup beforehand. Here's how to do it on the bracket page:</p>
+            <p><img src="img/assign.jpg" class="img-thumbnail mx-auto d-block" alt="Example of a start.gg stations & streams page should look"></p>
+            <p>You can assign multiple sets for a station or stream and they'll be put in a queue, and S.M.A.R.T. will start reporting results for the first set assigned to that station or stream, automatically reporting results for the next ones as they happen. This can be useful for the Top 8 or Top 4 section of the tournament, where matches are usually called at a specific order.</p>
+            <p>S.M.A.R.T. will try to detect who's playing on each side through the use of in-game tags.</p>
+            <p><em>If at least one of the players is using the same tag in-game as on start.gg, the app will be able to correctly report the results regardless of the side they are playing. Due to this, it's <strong>highly recommended</strong> to instruct the players at your tournament to use in-game tags that are similar to their start.gg tag when playing on S.M.A.R.T. connected consoles.</em></p>
+            <p>If this is not the case and/or for some other reason S.M.A.R.T. is not able to accurately detect the order of players playing in a match, you can fix it using the <code class="text-success">Swap Players</code> button.</p>
+        </section>
+        
+        <section id="features" class="mb-5">
+            <h2>Additional Features and Tips</h2>
+            <h4>Integrating with TournamentStreamHelper</h4>
+            <p>TournamentStreamHelper is a scoreboard app for tournament livestreams. It has a lot of robust features, while also being free to use and open-source.</p>
+            <p><a href="https://github.com/joaorb64/TournamentStreamHelper">You can check out TournamentStreamHelper here (https://github.com/joaorb64/TournamentStreamHelper)</a>.</p>
+            <p>S.M.A.R.T. is able to seamlessly integrate with TournamentStreamHelper in order to keep the scoreboard on your tournament stream automatically updated. No additional set up on S.M.A.R.T. is needed for this.</p>
+            <p>On TSH, all you need to do is use the "follow stream/station" feature.</p>
+            <p>First, you must enter the URL for your event on the "Set tournament" button, then click on "Track sets from a stream or station" on the bottom.</p>
+            <p>If your stream or station is not visible on the list, make sure it was correctly created on your tournament in start.gg. Sometimes streams won't show on the list unless at least one set is assigned to it.</p>
+            <p>Once that's done, TSH will automatically update the score once a game ends, and also update to show information on the next set once the current one ends.</p>
+            <p><img src="img/tsh.jpg" class="img-thumbnail mx-auto d-block" alt="How to set up a phase name on start.gg"></p>
+            <h4>Dynamic "Best Of" Setting for Event Phases</h4>
+            <p>Usually as tournaments go on, sets in your event will change from <em>Best of 3</em> to <em>Best of 5</em> on the finals phase of your event, for example.</p>
+            <p>In order to remove the need to keep the <code>Best Of</code> setting updated on your event, S.M.A.R.T. is also able to update this value based on which phase the currently assigned set is on.</p>
+            <p>start.gg doesn't let you configure the "Best Of" setting of a phase or a round for offline events, but we can work around this by setting a "Best Of" abbreviation on the phase name. S.M.A.R.T. will then detect it and update the value accordingly.</p>
+            <p>Once you create the phase where all sets are supposed to be Best Of 5, for example, just add "BO5" to the name and you should be all set.</p>
+            <p><img src="img/besta.jpg" class="img-thumbnail mx-auto d-block" alt="How to set up a phase name on start.gg"></p>
+        </section>
+        
+        <section id="troubleshooting" class="mb-5">
+            <h2>Troubleshooting</h2>
+            <h4>App says "Timed out" even though the console is turned on and matches are happening.</h4>
+            <p>If this happens, it's either due to the console being put into sleep mode or staying on the HOME menu for too long. This can make the data providers stop working.</p>
+            <p>Closing the game and opening it again restarts the provider and you should be able to connect to the console again.</p>
+            <h4>The app reported swapped results for a set in the past and I can't use the Swap Players button on that set anymore. Is there a way to quickly fix the results?</h4>
+            <p>If you need to swap results of previous sets, we recommend using <a href="https://startkit.gg/">StartKit (https://startkit.gg/)</a> where a "Swap Results" button should be available for all completed sets.</p>
+            <p><img src="img/startkit.png" class="img-thumbnail mx-auto d-block" alt="How to access StartKit to swap results of previous sets"></p>
+        </section>
+                
+        <section id="contact" class="mb-5">
+            <h2>Contact</h2>
+            <p>If you need further assistance, please contact us at...</p>
+        </section>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
