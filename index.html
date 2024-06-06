@@ -14,7 +14,7 @@
         <nav id="toc" class="mb-4">
             <h4>Table of Contents</h4>
             <ul class="list-group">
-                <li class="list-group-item"><a href="#introduction">Introduction</a></li>
+                <li class="list-group-item"><a href="#quickstart">Quick Start</a></li>
                 <li class="list-group-item"><a href="#installation">Installation and Setup</a></li>
                 <li class="list-group-item"><a href="#usage">Usage</a></li>
                 <li class="list-group-item"><a href="#features">Additional Features and Tips</a></li>
@@ -24,10 +24,41 @@
         </nav>
         
         <section id="installation" class="mb-5">
+            <h2>Quick Start</h2>
+            <p>If any of these instructions don't feel clear, try going through the more in-depth guide on the <a href="#installation">Installation and Setup</a> and <a href="#usage">Usage</a> sections.</p>
+            <h4>Getting it Up and Running</h4>
+            <ul>
+                <li>Download S.M.A.R.T. on our <a href="https://discord.gg/zecMKvF8b5">Discord server (https://discord.gg/zecMKvF8b5)</a> after subscribing on <a href="https://ko-fi.com/teampolygon">our Ko-Fi page (https://ko-fi.com/teampolygon)</a></li>
+                <li>Get a start.gg developer token. <a href="https://developer.start.gg/docs/authentication/">Learn how to do this here (https://developer.start.gg/docs/authentication/)</a></li>
+                <li>Open <kbd>config.ini</kbd></li>
+                <li>On the line that says <kbd>token=</kbd>, copy and paste your start.gg token.</li>
+                <li>Open <kbd>smart.exe</kbd></li>
+            </ul>
+            <h4>Connecting to your Switch</h4>
+            <ul>
+                <li>Choose a data provider. We recommend <code>smush_info</code> if your SSBU is on 13.0.1, if you're on 13.0.2 use <code>ReFramed</code>. <strong>You must have a modded Switch to do this!</strong></li>
+                <li>Click on the text that says <code>Click here to download and install this data provider</code> to get instructions on how to install that mod on your Nintendo Switch</li>
+                <li>Copy and paste the URL of your tournament on the <code>Tournament/Event URL</code> field</li>
+                <li>Insert the name of your stream on the <code>Stream/Station</code> field</li>
+                <li>Insert the IP Address of your Switch on the <code>Provider URL/IP Addr.</code> field if using <code>smush_info</code>, insert the IP of your own computer (usually <kbd>127.0.0.1</kbd>) if using <code>ReFramed</code></li>
+                <li>Click on <code class="text-success">Connect</code></li>
+                <li>If using TournamentStreamHelper, click on the "Track sets from a stream or station" and select your stream there</ul>
+                <li>All set!</li>
+            </ul>
+            <h4>Assigning Matches</h4>
+            <ul>
+                <li>Make sure your stream is registered on your tournament in start.gg. To do this, go to <strong>Stations & Streams</strong> on your admin page.</li>
+                <li>Open the set that's going to be played on your stream.</li>
+                <li>Assign that set to your stream on the set window.</li>
+                <li>Once that set ends and the results are all reported, repeat this process until your tournament ends!</li>
+            </ul>
+        </section>
+
+        <section id="installation" class="mb-5">
             <h2>Installation and Setup</h2>
             <h4>Installing the App</h4>
             <p>Installing and setting up S.M.A.R.T. for the first time takes a bit of work but is relatively simple. First you need to get the S.M.A.R.T. app.</p>
-            <p>As of this writing, the app is on private early access through the <a href="https://ko-fi.com/teampolygon">monthly subscription here (https://ko-fi.com/teampolygon)</a>.</p>
+            <p>As of right now, the app is on private early access through the <a href="https://ko-fi.com/teampolygon">monthly subscription here (https://ko-fi.com/teampolygon)</a>.</p>
             <p>No subsequent monthly payments are required to continue using the app. You should only continue paying for the subscription if you'd like to support future updates to this project and to receive dedicated support.</p>
             <p>Once subscribed, you will get access to the download link on our <a href="https://discord.gg/zecMKvF8b5">Discord server (https://discord.gg/zecMKvF8b5)</a>.</p>
             <p>The app currently is only tested on Windows, but should also work on Linux and MacOS - if this is your case, you can contact us on the above Discord server before subscribing to help us test on those platforms.</p>
@@ -66,12 +97,12 @@
                     <li><kbd>game_end_scene</kbd>: Scene to which S.M.A.R.T. should change to when any match ends (whether it's a tournament set or not).</li>
                     <li><kbd>set_end_scene</kbd>: Scene to which S.M.A.R.T. should change to when a tournament set ends (after transition to game end scene happens).</li>
                     <li><kbd>set_end_scene_delay</kbd>: How many seconds S.M.A.R.T. must wait before changing from game end scene to set end scene.</li>
-                    <li><kbd>enable_replays</kbd>: Defines if S.M.A.R.T. should use OBS to record key moments in the game to show as a replay later. Set value to <kbd>true</kbd> to enable this feature, or <kbd>false</kbd> to disable.</li> <span class="text-danger">(This feature is not out yet)</span>.</li>
+                    <li><kbd>enable_replays</kbd>: Defines if S.M.A.R.T. should use OBS to record key moments in the game to show as a replay later. Set value to <kbd>true</kbd> to enable this feature, or <kbd>false</kbd> to disable.</li> <span class="text-danger">(This feature is coming out soon)</span>.</li>
                 </ul>
             </ul>
             <p>After going through all the settings on config.ini you should be good to go to open the app.</p>
             <h4>Installing Data Providers</h4>
-            <p>After downloading the app, you must also get one of the supported data providers. For Smash Bros. Ultimate, these are mods you install on your Nintendo Switch.</p>
+            <p>After downloading the app, you must also get one of the supported data providers. For Smash Bros. Ultimate, these are mods you install on your Nintendo Switch, so <strong>it is required to have a modded Switch (with CFW such as Atmosphère) to install game mods</strong>.</p>
             <p>Once you open S.M.A.R.T. the app will show you the avaiable ones and how to install them.</p>
             <p>Here's some additional information on how to use the data providers with S.M.A.R.T.:</p>
             <ul>
