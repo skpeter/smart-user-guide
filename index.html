@@ -3,16 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S.M.A.R.T. User Guide</title>
+    <title>S.M.A.R.T. Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css.css" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-5">
-        <h1>S.M.A.R.T. User Guide</h1>
+        <h1><img id="logo" src="img/icon.png" alt="Logo">S.M.A.R.T. Homepage</h1>
         <p class="mb-5"><small><em>Smash Match Auto Reporter Thing</em></small></p>
+
+        <div class="embed-responsive embed-responsive-16by9 mb-5">
+            <video class="embed-responsive-item" controls style="width: 100%;">
+                <source src="img/example.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <p>Welcome! S.M.A.R.T. is an app that is able to use data gathered from Smash Ultimate matches to report them to start.gg.</p>
+        <p>Make your TOing life easier while you focus on other things of your tournament while matches get automatically reported for you.</p>
+        <p>S.M.A.R.T. also integrates seamlessly with stream scoreboarding software such as TournamentStreamHelper to keep your stream up to date!</p>
+        <p>If you'd like to learn more on how it works, feel free to <a href="#contact">contact us</a> at any time. If you want to get started, refer to the user guide just below!</p>
+
+        <br><br><br>
         
         <nav id="toc" class="mb-4">
-            <h4>Table of Contents</h4>
+            <h4>User Guide</h4>
             <ul class="list-group">
                 <li class="list-group-item"><a href="#requirements">Requirements</a></li>
                 <li class="list-group-item"><a href="#quickstart">Quick Start</a></li>
@@ -50,7 +65,6 @@
                 <li>Choose a data provider, download it and install it on your Switch. Each has their own ups and downs as described when you select them.</li>
                 <li>Click on the text that says <code>Click here to download and install this data provider</code> to get instructions on how to install that mod on your Nintendo Switch</li>
                 <li>Copy and paste the URL of your tournament on the <code>Tournament/Event URL</code> field</li>
-                <li>Insert the name of your stream on the <code>Stream/Station</code> field</li>
                 <li>Insert the IP Address of your Switch on the <code>Provider URL/IP Addr.</code> field if using <code>smush_info</code>, insert the IP of your own computer (usually <kbd>127.0.0.1</kbd>) if using <code>ReFramed</code></li>
                 <ul>
                     <li>
@@ -58,16 +72,11 @@
                     </li>
                 </ul>
                 <li>Click on <code class="text-success">Connect</code></li>
-                <li>If using TournamentStreamHelper, click on the "Track sets from a stream or station" and select your stream there</ul>
+                <li>If using TournamentStreamHelper, click on the "Track sets from a stream or station" and select your stream there</li>
+                <li><strong>Make sure all of the players playing on your setup are using their start.gg tags so S.M.A.R.T. is able to identify them!</strong></li>
                 <li>All set!</li>
             </ul>
-            <h4>Assigning Matches</h4>
-            <ul>
-                <li>Make sure your stream is registered on your tournament in start.gg. To do this, go to <strong>Stations & Streams</strong> on your admin page. <a target=”_blank” href="https://help.start.gg/en/articles/1465692-adding-streams-and-creating-stations">This page shows you how to do that (https://help.start.gg/en/articles/1465692-adding-streams-and-creating-stations)</a>.</li>
-                <li>Open the set that's going to be played on your stream.</li>
-                <li>Assign that set to your stream on the set window.</li>
-                <li>Once that set ends and the results are all reported, repeat this process until your tournament ends!</li>
-            </ul>
+
         </section>
 
         <section id="installation" class="mb-5">
@@ -92,7 +101,7 @@
                 <li><kbd>tournament</kbd> - <span class="text-info">All fields are optional and are values you can set for when the app opens.</span></li></li>
                 <ul>
                     <li><kbd>url</kbd>: URL of the event where data will be reported to on start.gg by default. For recurring events, you could set a URL here and then quickly change the event number on next weeks/months.</li>
-                    <li><kbd>identifier</kbd>: Identifier for which setup this instance of S.M.A.R.T. reports to on start.gg by default. Can be a stream name or a station number.</li>
+                    <li><kbd>identifier</kbd>: Identifier for which setup this instance of S.M.A.R.T. reports to on start.gg by default. Can be a stream name or a station number. <strong>Leave this blank to use Automatic Mode (more info below)</strong></li>
                     <li><kbd>best_of</kbd>: Default value for how many games a set should go to in order to determine a winner. This can change dynamically based on the start.gg phase - check <a href="#features">Additional Features and Tips</a> for how.</li>
                 </ul>
                 <li><kbd>startgg</kbd> - <span class="text-danger">All fields are required.</span></li></li>
@@ -140,7 +149,7 @@
             <ul>
                 <li><code>Best Of</code>: How many games a set should go to in order to determine a winner. This can change dynamically based on the start.gg phase - check <a href="#features">Additional Features and Tips</a> for how.</li>
                 <li><code>Tournament/Event URL</code>: URL of the tournament where data will be reported to on start.gg. An example would be: <a target=”_blank” href="https://www.start.gg/tournament/smash-station-87-1/event/cps-nextgen">https://www.start.gg/tournament/smash-station-87-1/event/cps-nextgen</a>. The event part of the URL is required if working with stations instead of a stream.</li>
-                <li><code>Stream/Station</code>: Which setup this instance of S.M.A.R.T. should report to on start.gg. Can be a stream name or a station number.</li>
+                <li><code>Stream/Station</code>: Which setup this instance of S.M.A.R.T. should report to on start.gg. Can be a stream name or a station number. <strong>Leave blank to enable Automatic Mode - more info below.</strong></li>
                 <li><code>Game Data Provider</code>: Select the data provider you want to use. Once a provider is selected, the app will show you what you can or can not do with it, alongside a link to download and install it.</li>
                 <li><code>Provider URL/Ip Addr.</code>: URL or IP Address of the console where the data will come from.</li>
                 <li><code>Enable OBS functions?</code>: Set whether the S.M.A.R.T. app will interact with OBS. OBS settings must be defined on <code>config.ini</code> before enabling.</li>
@@ -149,8 +158,16 @@
             </ul>
             <p>Once clicking on <code class="text-success">Connect</code>, the app will connect to the console in order to receive data. The console must be on the same network as the computer where S.M.A.R.T. is being run.</p>
             <p>If having both devices on the same network is an issue, we recommend setting up a WiFi Hotspot on the computer to which the console can connect to.</p>
-            <h4>Getting Matches to be Reported</h4>
-            <p>You must indicate to S.M.A.R.T. which matches are to be played on the stream or station before they happen. <a target=”_blank” href="https://help.start.gg/en/articles/1465692-adding-streams-and-creating-stations">This page shows you how to do that (https://help.start.gg/en/articles/1465692-adding-streams-and-creating-stations)</a></p>
+            <h4>Automatic Mode</h4>
+            <p>As a new feature for S.M.A.R.T. you can also have matches be automatically picked up and reported without having to assign them to a stream or anything.</p>
+            <p>However it is <strong>ESSENTIAL</strong> that players on your setup use their start.gg tags in-game so the app is able to know which set is currently being played.</p>
+            <p>If any of the tags don't match to a player that should be playing a set, the match will be considered a friendly and results will not be reported.</p>
+            <h4>Tag Database</h4>
+            <p>If you run a local and have knowledge that some players go by specific tags, you can populate this using the tags.csv file.</p>
+            <p>By default, S.M.A.R.T. will populate this tag database with data from previously played tournament matches. However you can edit this file as you see fit.</p>
+            <p>The first column is the in-game tag the player uses. The second column is the start.gg tag the user goes by. <em>Do not include prefixes or clan tags on this tag.</em></p>
+            <h4>Getting Matches to be Reported Beforehand</h4>
+            <p>The recommended way to let S.M.A.R.T. report results to you is by indicating to it which matches are to be played on the stream or station before they happen. <a target=”_blank” href="https://help.start.gg/en/articles/1465692-adding-streams-and-creating-stations">This page shows you how to do that (https://help.start.gg/en/articles/1465692-adding-streams-and-creating-stations)</a></p>
             <p>You only need to add the number of stations you feel you'll be able to use with S.M.A.R.T. If you're only using it with a stream setup, creating stations is not needed.</p>
             <p>Then, once your tournament starts, you must indicate to S.M.A.R.T. which set is to be played on the stream or station before the match starts. Here's how to do it on the bracket page:</p>
             <p><img src="img/assign.jpg" class="img-thumbnail mx-auto d-block" alt="Example of a start.gg stations & streams page should look"></p>
