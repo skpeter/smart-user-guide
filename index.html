@@ -43,7 +43,11 @@
             <h2>Requirements</h2>
             <p>Please make sure you have all of the requirements before subscribing and downloading S.M.A.R.T.:</p>
             <ul>
-                <li><strong>You must have a Nintendo Switch with custom (modded) firmware such as Atmosphère</strong>. S.M.A.R.T. only works with Smash Ultimate mods.</li>
+                <li><strong>You must have either:</strong></li>
+                <ul>
+                    <li>A stream setup with OBS open, or</li>
+                    <li>a Nintendo Switch with custom (modded) firmware such as Atmosphère.</li>
+                </ul>
                 <li>You must connect the Nintendo Switch to a wired or wireless network.</li>
                 <li>A PC which will receive data from the game.</li>
             </ul>
@@ -65,7 +69,7 @@
                 <li>Choose a data provider, download it and install it on your Switch. Each has their own ups and downs as described when you select them.</li>
                 <li>Click on the text that says <code>Click here to download and install this data provider</code> to get instructions on how to install that mod on your Nintendo Switch</li>
                 <li>Copy and paste the URL of your tournament on the <code>Tournament/Event URL</code> field</li>
-                <li>Insert the IP Address of your Switch on the <code>Provider URL/IP Addr.</code> field if using <code>smush_info</code>, insert the IP of your own computer (usually <kbd>127.0.0.1</kbd>) if using <code>ReFramed</code></li>
+                <li>Insert the IP Address of your Switch on the <code>Provider URL/IP Addr.</code> field if using <code>smush_info</code>, insert the IP of your own computer (usually <kbd>127.0.0.1</kbd>) if using <code>SmartCV</code> or <code>ReFramed</code></li>
                 <ul>
                     <li>
                         If you are using <code>ReFramed</code>, you must enable the Statistics plugin and on it enable the Websocket Server
@@ -95,7 +99,7 @@
             <ul>
                 <li><kbd>provider</kbd> - <span class="text-info">All fields are optional and are values you can set for when the app opens.</span></li>
                 <ul>
-                    <li><kbd>name</kbd>: Name of the data provider you want to use every time the app opens. Needs to be a supported data provider. Currently supported values are <kbd>ReFramed</kbd> and <kbd>smush_info</kbd>.</li>
+                    <li><kbd>name</kbd>: Name of the data provider you want to use every time the app opens. Needs to be a supported data provider. Currently supported values are <kbd>SmartCV</kbd>, <kbd>ReFramed</kbd> and <kbd>smush_info</kbd>.</li>
                     <li><kbd>url</kbd>: Default value for URL or IP Address of the console where the data will come from.</li>
                 </ul>
                 <li><kbd>tournament</kbd> - <span class="text-info">All fields are optional and are values you can set for when the app opens.</span></li></li>
@@ -130,10 +134,11 @@
             <p><img src="img/switch-ip.jpg" class="img-thumbnail mx-auto d-block" alt="Screenshot showing where the IP Address on your Nintendo Switch will be"></p>
             <p>After going through all the settings on config.ini you should be good to go to open the app.</p>
             <h4>Installing Data Providers</h4>
-            <p>After downloading the app, you must also get one of the supported data providers. For Smash Bros. Ultimate, these are mods you install on your Nintendo Switch.</p>
+            <p>After downloading the app, you must also get one of the supported data providers. For Smash Bros. Ultimate, these are mods you install on your Nintendo Switch (except for <kbd>SmartCV</kbd> as it needs no mods to be installed).</p>
             <p>Once you open S.M.A.R.T. the app will show you the avaiable ones and how to install them.</p>
             <p>Here's some additional information on how to use the data providers with S.M.A.R.T.:</p>
             <ul>
+                <li><strong><em>New!</em> SmartCV</strong>: S.M.A.R.T. receives data through the SmartCV app. Once you've downloaded and went through the setup process, it should already be sending data to S.M.A.R.T. if you set your <kbd>config.ini</kbd> file correctly.</li>
                 <li><strong>ReFramed</strong>: S.M.A.R.T. receives data through the ReFramed app. Once you've downloaded, installed the app and connected it to your Nintendo Switch, you must enable the Statistics plugin. On the plugin go to the "Settings and Export" tab and make sure the Websocket Server is active. <em>Your provider URL/IP is the IP Address of your machine on the specified port. If you're running multiple instances of S.M.A.R.T. and ReFramed, be sure to specify a different port than the default (1337) then add the port number at the end of the IP Address (example: 127.0.0.1:1336).</em></li>
                 <li><strong>smush_info</strong>: No additional setup is required but the console needs to be connected to the same network as the computer S.M.A.R.T. is running on before the game starts. <em>Your provider URL/IP is the IP Address of the Nintendo Switch. You can find out which IP Address your Switch is on by accessing the Internet section on the console settings.</em></li>
             </ul>
