@@ -129,6 +129,7 @@
                     <li><kbd>set_end_scene</kbd>: Scene to which S.M.A.R.T. should change to when a tournament set ends (after transition to game end scene happens).</li>
                     <li><kbd>set_end_scene_delay</kbd>: How many seconds S.M.A.R.T. must wait before changing from game end scene to set end scene. Can use fractions (for example: half a second = 0.5).</li>
                     <li><kbd>enable_vod_recording</kbd>: Sets S.M.A.R.T. to record record each match played separated by file to be uploaded to YouTube or similar platforms later. Use <kbd>true</kbd> to enable this feature, or <kbd>false</kbd> to disable.</li>
+                    <li><kbd>recording_stop_delay</kbd>: How many seconds S.M.A.R.T. should wait to stop recording after a set ends. Default value is <kbd>1</kbd> second.</li>
                     <li><kbd>enable_replays</kbd>: Sets S.M.A.R.T. to record key moments in the game to show as a replay later. Use <kbd>true</kbd> to enable this feature, or <kbd>false</kbd> to disable. <span class="text-danger">(This feature is coming out soon)</span>.</li>
                 </ul>
             </ul>
@@ -141,7 +142,7 @@
             <p>Here's some additional information on how to use the data providers with S.M.A.R.T.:</p>
             <ul>
                 <li><strong><em>New!</em> SmartCV</strong>: S.M.A.R.T. receives data through the SmartCV app. Once you've downloaded and went through the setup process, it should already be sending data to S.M.A.R.T. if you set your <kbd>config.ini</kbd> file correctly.</li>
-                <li><strong>ReFramed</strong>: S.M.A.R.T. receives data through the ReFramed app. Once you've downloaded, installed the app and connected it to your Nintendo Switch, you must enable the Statistics plugin. On the plugin go to the "Settings and Export" tab and make sure the Websocket Server is active. <em>If you're running multiple instances of S.M.A.R.T. and ReFramed, you must then specify a different port than the default (1337) then add the port number at the end of your local IP address (example: 127.0.0.1:1336).</em></li>
+                <li><strong>ReFramed</strong>: S.M.A.R.T. receives data through the ReFramed app. Once you've downloaded, installed the app and connected it to your Nintendo Switch, you must enable the Statistics plugin on the "Session" tab. Once that is enabled go to "Settings and Export" inside the plugin and make sure the Websocket Server is active. <em>If you're running multiple instances of S.M.A.R.T. and ReFramed, you must then specify a different port than the default (1337) then add the port number at the end of your local IP address (example: 127.0.0.1:1336).</em></li>
                 <li><strong>smush_info</strong>: No additional setup is required but the console needs to be connected to the same network as the computer S.M.A.R.T. is running on before the game starts. <em>Your provider URL/IP is the IP Address of the Nintendo Switch. You can find out which IP Address your Switch is on by accessing the Internet section on the console settings.</em></li>
             </ul>
             <p>Once that's done, you should be good to go!</p>
