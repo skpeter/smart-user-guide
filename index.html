@@ -98,16 +98,20 @@
             <p>Here's a description on all of them:</p>
             <p><img src="img/config.jpg" class="img-thumbnail mx-auto d-block" alt="How the config.ini file looks like"></p>
             <ul>
-                <li><kbd>provider</kbd> - <span class="text-info">All fields are optional and are values you can set for when the app opens.</span></li>
+                <li><kbd>general</kbd> - <span class="text-info">All fields in this section have default recommended settings. Only change them if you know what you're doing.</span></li>
+                    <li><kbd>retry_after_error</kbd>: How many seconds to wait after an error to try and reconnect to the game/console again. Default setting is <kbd>20</kbd>.</li>
+                    <li><kbd>connection_timeout_limit</kbd>: How many seconds to wait without receiving any signals from the game/console before notifying the user. Default setting is <kbd>120</kbd> (2 minutes).</li>
+                    <li><kbd>allow_overwrite</kbd>: Whether the app is allowed to overwrite settings left on this config.cfg file. Set to <kbd>true</kbd> or <kbd>false</kbd>, default setting is <kbd>true</kbd>.</li>
+                <li><kbd>provider</kbd> - <span class="text-info">All fields are optional and are settings you can edit when the app opens.</span></li>
                 <ul>
-                    <li><kbd>name</kbd>: Name of the data provider you want to use every time the app opens. Needs to be a supported data provider. Currently supported values are <kbd>SmartCV</kbd>, <kbd>ReFramed</kbd> and <kbd>smush_info</kbd>.</li>
-                    <li><kbd>url</kbd>: Default value for URL or IP Address of the console where the data will come from. If the data is coming from your PC, leave this value blank.</li>
+                    <li><kbd>name</kbd>: Name of the data provider you want to use every time the app opens. Needs to be a supported data provider. Currently supported settings are <kbd>SmartCV</kbd>, <kbd>ReFramed</kbd> and <kbd>smush_info</kbd>.</li>
+                    <li><kbd>url</kbd>: Default setting for URL or IP Address of the console where the data will come from. If the data is coming from your PC, leave this setting blank.</li>
                 </ul>
-                <li><kbd>tournament</kbd> - <span class="text-info">All fields are optional and are values you can set for when the app opens.</span></li></li>
+                <li><kbd>tournament</kbd> - <span class="text-info">All fields are optional and are settings you can change for when the app opens.</span></li></li>
                 <ul>
                     <li><kbd>url</kbd>: URL of the event where data will be reported to on start.gg by default. For recurring events, you could set a URL here and then quickly change the event number on next weeks/months.</li>
-                    <li><kbd>identifier</kbd>: Identifier for which setup this instance of S.M.A.R.T. reports to on start.gg by default. Can be a stream name or a station number. <strong>Leave this blank to use Automatic Mode (more info below)</strong></li>
-                    <li><kbd>best_of</kbd>: Default value for how many games a set should go to in order to determine a winner. This can change dynamically based on the start.gg phase - check <a href="#features">Additional Features and Tips</a> for how.</li>
+                    <li><kbd>identifier</kbd>: Identifier for which setup this instance of S.M.A.R.T. reports to on start.gg by default. Can be a stream name or a station number. <strong>Leave this blank to use Automatic Mode (more info below)</strong>.</li>
+                    <li><kbd>best_of</kbd>: Default setting for how many games a set should go to in order to determine a winner. This can change dynamically based on the start.gg phase - check <a href="#features">Additional Features and Tips</a> for how.</li>
                 </ul>
                 <li><kbd>startgg</kbd> - <span class="text-danger">All fields are required.</span></li></li>
                 <ul>
@@ -129,7 +133,7 @@
                     <li><kbd>set_end_scene</kbd>: Scene to which S.M.A.R.T. should change to when a tournament set ends (after transition to game end scene happens).</li>
                     <li><kbd>set_end_scene_delay</kbd>: How many seconds S.M.A.R.T. must wait before changing from game end scene to set end scene. Can use fractions (for example: half a second = 0.5).</li>
                     <li><kbd>enable_vod_recording</kbd>: Sets S.M.A.R.T. to record record each match played separated by file to be uploaded to YouTube or similar platforms later. Use <kbd>true</kbd> to enable this feature, or <kbd>false</kbd> to disable.</li>
-                    <li><kbd>recording_stop_delay</kbd>: How many seconds S.M.A.R.T. should wait to stop recording after a set ends. Default value is <kbd>1</kbd> second.</li>
+                    <li><kbd>recording_stop_delay</kbd>: How many seconds S.M.A.R.T. should wait to stop recording after a set ends. Default value is <kbd>1</kbd> second. Can use fractions (for example: half a second = 0.5).</li>
                     <li><kbd>enable_replays</kbd>: Sets S.M.A.R.T. to record key moments in the game to show as a replay later. Use <kbd>true</kbd> to enable this feature, or <kbd>false</kbd> to disable. <span class="text-danger">(This feature is coming out soon)</span>.</li>
                 </ul>
             </ul>
@@ -167,7 +171,7 @@
             <p>Once clicking on <code class="text-success">Connect</code>, the app will connect to the console in order to receive data. The console must be on the same network as the computer where S.M.A.R.T. is being run.</p>
             <p>If having both devices on the same network is an issue, we recommend setting up a WiFi Hotspot on the computer to which the console can connect to.</p>
             <h4>Automatic Mode</h4>
-            <p>As a new feature for S.M.A.R.T. you can also have matches be automatically picked up and reported without having to assign them to a stream or anything.</p>
+            <p>You can also have matches be automatically picked up and reported without having to assign them to a stream or anything.</p>
             <p>However it is <strong>ESSENTIAL</strong> that players on your setup use their start.gg tags in-game so the app is able to know which set is currently being played.</p>
             <p>If any of the tags don't match to a player that should be playing a set, the match will be considered a friendly and results will not be reported.</p>
             <h4>Tag Database</h4>
