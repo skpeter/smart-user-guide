@@ -99,9 +99,13 @@
             <p><img src="img/config.jpg" class="img-thumbnail mx-auto d-block" alt="How the config.ini file looks like"></p>
             <ul>
                 <li><kbd>general</kbd> - <span class="text-info">All fields in this section have default recommended settings. Only change them if you know what you're doing.</span></li>
+                <ul>
                     <li><kbd>retry_after_error</kbd>: How many seconds to wait after an error to try and reconnect to the game/console again. Default setting is <kbd>20</kbd>.</li>
                     <li><kbd>connection_timeout_limit</kbd>: How many seconds to wait without receiving any signals from the game/console before notifying the user. Default setting is <kbd>120</kbd> (2 minutes).</li>
                     <li><kbd>allow_overwrite</kbd>: Whether the app is allowed to overwrite settings left on this config.cfg file. Set to <kbd>true</kbd> or <kbd>false</kbd>, default setting is <kbd>true</kbd>.</li>
+                    <li><kbd>tag_match_threshold</kbd>: Customize the minimum similarity between a player's tag and their start.gg name in order for the app to try and check if their results should be swapped. Use a value between <kbd>0</kbd> and <kbd>100</kbd>, default setting is <kbd>50</kbd>.</li>
+                    <li><kbd>enable_text_output</kbd>: Whether the app should save data received from the game to output to text files. These text files are in the <kbd>out</kbd> directory. Set to <kbd>true</kbd> or <kbd>false</kbd>, default setting is <kbd>false</kbd></li>
+                </ul>
                 <li><kbd>provider</kbd> - <span class="text-info">All fields are optional and are settings you can edit when the app opens.</span></li>
                 <ul>
                     <li><kbd>name</kbd>: Name of the data provider you want to use every time the app opens. Needs to be a supported data provider. Currently supported settings are <kbd>SmartCV</kbd>, <kbd>ReFramed</kbd> and <kbd>smush_info</kbd>.</li>
@@ -116,7 +120,7 @@
                 <li><kbd>startgg</kbd> - <span class="text-danger">All fields are required.</span></li></li>
                 <ul>
                     <li><kbd>token</kbd>: Your start.gg developer token which is tied to your account. <a target=”_blank” href="https://developer.start.gg/docs/authentication/">Click here to learn how to get a developer token (https://developer.start.gg/docs/authentication/)</a>.</li>
-                    <li><kbd>only_get_called_sets</kbd>: Whether or not S.M.A.R.T. should only look for sets that were marked as "Called" on start.gg at that stream/station before reporting a result. Set value to <kbd>true</kbd> to enable this feature, or <kbd>false</kbd> to detect any set.</li>
+                    <li><kbd>only_get_called_sets</kbd>: Whether or not S.M.A.R.T. should only look for sets that were marked as "Called" on start.gg at that stream/station before reporting a result. Set to <kbd>true</kbd> or <kbd>false</kbd>, default setting is <kbd>false</kbd>.</li>
                 </ul>
                 <li><kbd>obs</kbd> - <span class="text-danger">All fields are required if you are using OBS.</span></li></li>
                 <ul>
