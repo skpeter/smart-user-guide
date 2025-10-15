@@ -1,0 +1,34 @@
+{
+  "characters": {
+    "Fleet": 2498,
+    "Zetterburn": 2499,
+    "Excaliburn": 2499,
+    "Wrastor": 2500,
+    "Ranno": 2501,
+    "Maypul": 2502,
+    "Clairen": 2503,
+    "Kragg": 2504,
+    "Loxodont": 2505,
+    "Orcane": 2597,
+    "Forsburn": 2599,
+    "Etalus": 2615,
+    "Olympia": 2619,
+    "Absa": 2709,
+    "None": null
+  },
+  "stages": {
+    "Aetherian Forest": null,
+    "Godai Delta": null,
+    "Hodojo": null,
+    "Julesvale": null,
+    "Merchant Port": null,
+    "Air Armada": null,
+    "Fire Capital": null,
+    "Hyperborean Harbor": null,
+    "Rock Wall": null,
+    "Crystal Oasis": null,
+    "Tempest Peak": null,
+    "Forest Understory": null,
+    "Stormswept Pillar": null
+  }
+}

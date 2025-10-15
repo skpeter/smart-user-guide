@@ -1,0 +1,22 @@
+{
+  "full_name": "Rivals of Aether II",
+  "enabled": true,
+  "providers": ["SmartCV-RoA2"],
+  "defaultMaxScore": 3,
+  "characters": {
+    "2498": "Fleet",
+    "2499": "Excaliburn",
+    "2500": "Wrastor",
+    "2501": "Ranno",
+    "2502": "Maypul",
+    "2503": "Clairen",
+    "2504": "Kragg",
+    "2505": "Loxodont",
+    "2597": "Orcane",
+    "2599": "Forsburn",
+    "2615": "Etalus",
+    "2619": "Olympia",
+    "2709": "Absa",
+    "": "Unknown"
+  }
+}
