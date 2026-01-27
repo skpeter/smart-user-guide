@@ -1,0 +1,37 @@
+{
+  "characters": {
+    "Zetterburn": 184,
+    "Orcane": 185,
+    "Wrastor": 186,
+    "Kragg": 187,
+    "Forsburn": 188,
+    "Maypul": 189,
+    "Absa": 190,
+    "Etalus": 191,
+    "Ori": 1117,
+    "Ranno": 1118,
+    "Clairen": 1119,
+    "Sylvanos": 1349,
+    "Elliana": 1350,
+    "Shovel Knight": 1381,
+    "Mollo": 1920,
+    "Hodan": 1921,
+    "Pomme": 1922,
+    "Olympia": 1923,
+    "None": null
+  },
+  "stages": {
+    "Fire Capitol": 150,
+    "Air Armada": 151,
+    "Rock Wall": 152,
+    "Merchant Port": 153,
+    "Treetop Lodge": 154,
+    "Blazing Hideout": 155,
+    "Tower of Heaven": 156,
+    "Tempest Peak": 285,
+    "Frozen Fortress": 286,
+    "Aethereal Gates": 287,
+    "Endless Abyss": 288,
+    "The Spirit Tree": 289
+  }
+}
