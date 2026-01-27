@@ -2,7 +2,7 @@
   "full_name": "Rivals of Aether",
   "enabled": true,
   "providers": [
-    "RoA-Game-Hook"
+    "roa_game_data_hook"
   ],
   "defaultMaxScore": 3,
   "characters": {
