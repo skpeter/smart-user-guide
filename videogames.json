@@ -1,8 +1,8 @@
-[
-    "ssbu",
-    "roa",
-    "roa2",
-    "sf6",
-    "ggst",
-    "uni2"
-]
+{
+    "ssbu": "Super Smash Bros. Ultimate",
+    "roa": "Rivals of Aether",
+    "roa2": "Rivals of Aether 2",
+    "sf6": "Street Fighter 6",
+    "ggst": "Guilty Gear Strive",
+    "uni2": "UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+}
