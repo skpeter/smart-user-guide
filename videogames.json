@@ -1,8 +1,8 @@
 {
-    "ssbu": "Super Smash Bros. Ultimate",
-    "roa": "Rivals of Aether",
-    "roa2": "Rivals of Aether 2",
-    "sf6": "Street Fighter 6",
-    "ggst": "Guilty Gear Strive",
-    "uni2": "UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+    "Super Smash Bros. Ultimate": "ssbu",
+    "Rivals of Aether": "roa",
+    "Rivals of Aether 2": "roa2",
+    "Street Fighter 6": "sf6",
+    "Guilty Gear Strive": "ggst",
+    "UNDER NIGHT IN-BIRTH Exe:Late[cl-r]": "uni2"
 }
