@@ -33,5 +33,19 @@
     "Aethereal Gates": 287,
     "Endless Abyss": 288,
     "The Spirit Tree": 289
+  },
+  "stageNames": {
+    "150": "Fire Capitol",
+    "151": "Air Armada",
+    "152": "Rock Wall",
+    "153": "Merchant Port",
+    "154": "Treetop Lodge",
+    "155": "Blazing Hideout",
+    "156": "Tower of Heaven",
+    "285": "Tempest Peak",
+    "286": "Frozen Fortress",
+    "287": "Aethereal Gates",
+    "288": "Endless Abyss",
+    "289": "The Spirit Tree"
   }
 }
