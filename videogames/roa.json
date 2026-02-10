@@ -25,5 +25,22 @@
     "1922": "Pomme",
     "1923": "Olympia",
     "": "Unknown"
+  },
+  "stages": {
+    "150": "Fire Capital",
+    "151": "Air Armada",
+    "152": "Rock Wall",
+    "153": "Merchant Port",
+    "154": "Treetop Lodge",
+    "155": "Blazing Hideout",
+    "156": "Tower of Heaven",
+    "285": "Tempest Peak",
+    "286": "Frozen Fortress",
+    "287": "Aethereal Gates",
+    "288": "Endless Abyss",
+    "289": "The Spirit Tree",
+    "997": "The Forest Floor",
+    "998": "Julesvale",
+    "999": "Troupple Pond"
   }
 }
