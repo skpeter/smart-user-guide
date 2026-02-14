@@ -1,6 +1,6 @@
 {
   "download": "https://github.com/TheLettuceClub/StriveSAMMI-Release",
-  "description": "UNI2xSAMMI: UNDER NIGHT IN-BIRTH II mod that accesses information about the game directly. Requires the ability to install mods on your PC.\nDeveloped by TheLettuceClub\n\nPROS:- Can very accurately read data compared to SmartCV\n\nCONS:- Requires mods to be installed on your game\n- Requires an update each time a new patch comes out\n- Has no support for handwarmer detection\n- Does not support player side confirmation dialog",
+  "description": "UNI2xSAMMI: UNDER NIGHT IN-BIRTH II mod that accesses information about the game directly. Requires the ability to install mods on your PC.\nDeveloped by TheLettuceClub\n\nPROS:\n- Can very accurately read data compared to SmartCV\n\nCONS:\n- Requires mods to be installed on your game\n- Requires an update each time a new patch comes out\n- Has no support for handwarmer detection\n- Does not support player side confirmation dialog",
   "discoverable": false,
   "defaultPort": 12524,
   "defaultVideogame": "uni2",
