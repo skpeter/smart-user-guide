@@ -1,6 +1,6 @@
 {
   "download": "https://github.com/skpeter/SmartCV-SSBU",
-  "description": "SmartCV: Computer vision project that reads Smash Ultimate game text straight from OBS.\nDeveloped by Team Polygon",
+  "description": "SmartCV: Computer vision project that reads Smash Ultimate game text straight from OBS.\nDeveloped by Team Polygon\n\nPROS:- Does not require installation of mods on your Nintendo Switch\n\nCONS:- Requires additional SmartCV app to run\n- No Doubles support\n- Has limited support for handwarmer detection",
   "discoverable": true,
   "defaultPort": 6565,
   "defaultVideogame": "ssbu",

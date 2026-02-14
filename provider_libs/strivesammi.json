@@ -1,6 +1,6 @@
 {
   "download": "https://github.com/TheLettuceClub/StriveSAMMI-Release",
-  "description": "StriveSAMMI: Guilty Gear -STRIVE- mod that accesses information about the game directly. Requires the ability to install mods on your PC.\nDeveloped by TheLettuceClub",
+  "description": "StriveSAMMI: Guilty Gear -STRIVE- mod that accesses information about the game directly. Requires the ability to install mods on your PC.\nDeveloped by TheLettuceClub\n\nPROS:- Can very accurately read data compared to SmartCV\n\nCONS:- Requires mods to be installed on your game\n- Needs an update each time a new patch comes out\n- Has no support for handwarmer detection\n- Does not support player side confirmation dialog",
   "discoverable": false,
   "defaultPort": 6615,
   "defaultVideogame": "ggst",

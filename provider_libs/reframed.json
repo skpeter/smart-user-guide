@@ -1,6 +1,6 @@
 {
   "download": "https://github.com/reframedultimate/ReFramed/releases",
-  "description": "REFRAMED: Smash Ultimate mod that compiles statistics about the match. Must install ReFramed app. Requires the ability to install mods on your Nintendo Switch.\n\nPROS:\n- Very stable and does not crash the game unless the connection to the Switch is very bad\n- Is able to detect handwarmers accurately\n\nCONS:\n- Doubles is not supported\n- May not detect match if there are Ice Climbers (ICs should be player 2)\n- Requires additional RF app to run\n- Must reconnect RF app to console if put into sleep mode",
+  "description": "REFRAMED: Smash Ultimate mod that compiles statistics about the match. Must install ReFramed app. Requires the ability to install mods on your Nintendo Switch.\n\nPROS:\n- Very stable and does not crash the game unless the connection to the Switch is very bad\n- Is able to detect handwarmers accurately\n\n\nCONS:\n- Doubles is not supported\n- May not detect match if there are Ice Climbers (ICs should be player 2)\n- Requires additional RF app to run\n- Must reconnect RF app to console if put into sleep mode",
   "discoverable": false,
   "defaultPort": 1337,
   "defaultVideogame": "ssbu",

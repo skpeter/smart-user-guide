@@ -1,6 +1,6 @@
 {
   "download": "https://github.com/sticks-stuff/smush_info",
-  "description": "smush_info: External app that reads and outputs Smash Ultimate data from internal memory.\nDeveloped by Team Polygon",
+  "description": "smush_info: External app that reads and outputs Smash Ultimate data from internal memory.\nDeveloped by Team Polygon\n\nPROS:- Supports Doubles (limited)\n\nCONS:- Does not require additional software to be running\n- Can cause crashes outside of regular smash matches\n- Disconnects if console is put into sleep mode",
   "discoverable": true,
   "defaultPort": 6565,
   "defaultVideogame": "ssbu",

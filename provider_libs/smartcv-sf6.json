@@ -1,6 +1,6 @@
 {
   "download": "https://github.com/skpeter/SmartCV-SF6",
-  "description": "SmartCV: Computer vision project that reads Street Fighter 6 footage from the game (if possible) or using OBS.\nDeveloped by Team Polygon",
+  "description": "SmartCV: Computer vision project that reads Street Fighter 6 footage from the game (if possible) or using OBS.\nDeveloped by Team Polygon\n\nPROS:- Does not require installation of mods on your game\n\nCONS:- Requires additional SmartCV app to run\n- Can be slightly inaccurate with detecting round ends\n- Has limited support for handwarmer detection",
   "discoverable": true,
   "defaultPort": 6565,
   "defaultVideogame": "sf6",
