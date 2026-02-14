@@ -1,4 +1,10 @@
 {
+  "download": "https://github.com/sticks-stuff/roa-game-data-hook",
+  "description": "roa_game_data_hook: External app that reads and outputs Rivals of Aether data from internal memory.\nDeveloped by sharlot\n\nEXPERIMENTAL PROVIDER!",
+  "discoverable": true,
+  "defaultPort": 4343,
+  "defaultVideogame": "roa",
+  "connectionType": "tcp",
   "characters": {
     "2": 184,
     "3": 185,

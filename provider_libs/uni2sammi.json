@@ -1,4 +1,10 @@
 {
+  "download": "https://github.com/TheLettuceClub/StriveSAMMI-Release",
+  "description": "UNI2xSAMMI: UNDER NIGHT IN-BIRTH II mod that accesses information about the game directly. Requires the ability to install mods on your PC.\nDeveloped by TheLettuceClub",
+  "discoverable": false,
+  "defaultPort": 12524,
+  "defaultVideogame": "uni2",
+  "connectionType": "ws",
   "characters": {
     "14": 2718,
     "13": 2719,

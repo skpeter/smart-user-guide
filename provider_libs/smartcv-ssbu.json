@@ -1,4 +1,10 @@
 {
+  "download": "https://github.com/skpeter/SmartCV-SSBU",
+  "description": "SmartCV: Computer vision project that reads Smash Ultimate game text straight from OBS.\nDeveloped by Team Polygon",
+  "discoverable": true,
+  "defaultPort": 6565,
+  "defaultVideogame": "ssbu",
+  "connectionType": "ws",
   "characters": {
     "": null,
     "Bayonetta": 1271,

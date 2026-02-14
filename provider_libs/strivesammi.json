@@ -1,4 +1,10 @@
 {
+  "download": "https://github.com/TheLettuceClub/StriveSAMMI-Release",
+  "description": "StriveSAMMI: Guilty Gear -STRIVE- mod that accesses information about the game directly. Requires the ability to install mods on your PC.\nDeveloped by TheLettuceClub",
+  "discoverable": false,
+  "defaultPort": 6615,
+  "defaultVideogame": "ggst",
+  "connectionType": "ws",
   "characters": {
     "sol": 1841,
     "kyk": 1834,
