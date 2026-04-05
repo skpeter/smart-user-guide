@@ -3,7 +3,7 @@
   "enabled": true,
   "providers": ["SmartCV-SF6"],
   "defaultMaxScore": 2,
-  "startggId": "43868",
+  "startggId": 43868,
   "characters": {
     "2271": "Blanka",
     "2272": "Cammy",

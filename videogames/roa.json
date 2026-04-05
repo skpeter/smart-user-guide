@@ -5,7 +5,7 @@
     "roa_game_data_hook"
   ],
   "defaultMaxScore": 3,
-  "startggId": "24",
+  "startggId": 24,
   "characters": {
     "184": "Zetterburn",
     "185": "Orcane",

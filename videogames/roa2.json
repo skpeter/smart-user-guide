@@ -3,7 +3,7 @@
   "enabled": true,
   "providers": ["SmartCV-RoA2"],
   "defaultMaxScore": 3,
-  "startggId": "53945",
+  "startggId": 53945,
   "characters": {
     "2498": "Fleet",
     "2499": "Zetterburn",

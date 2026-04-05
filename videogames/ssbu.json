@@ -3,7 +3,7 @@
   "enabled": true,
   "providers": ["ReFramed", "smush_info", "SmartCV-SSBU"],
   "defaultMaxScore": 3,
-  "startggId": "1386",
+  "startggId": 1386,
   "characters": {
     "1271": "Bayonetta",
     "1526": "Hero",
