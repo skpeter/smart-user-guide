@@ -3,6 +3,7 @@
   "enabled": true,
   "providers": ["SmartCV-GGST", "StriveSAMMI"],
   "defaultMaxScore": 2,
+  "startggId": "33945",
   "characters": {
     "1828": "Anji",
     "1829": "Axl",

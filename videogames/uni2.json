@@ -3,6 +3,7 @@
   "enabled": true,
   "providers": ["UNI2SAMMI"],
   "defaultMaxScore": 2,
+  "startggId": "50203",
   "characters": {
     "2718": "Akatsuki",
     "2719": "Byakuya",
