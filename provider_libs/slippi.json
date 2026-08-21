@@ -1,10 +1,10 @@
 {
   "download": "https://slippi.gg",
-  "description": "Slippi Dolphin: Live Melee game data over ENet (UDP 51441).\nEnable the Slippi spectator / 'Mirror' connection in Dolphin, then connect S.M.A.R.T. to localhost:51441.\n\nPROS:\n- Native Python parser (no Node sidecar)\n- Rollback-safe stock and winner reporting\n- Supports Singles and limited Doubles\n\nCONS:\n- Dolphin only (no Wii / Nintendont relay)\n- Requires Project Slippi Dolphin running locally",
+  "description": "Slippi Nintendont (Wii): Live Melee game data over TCP 51441.\nInstall Nintendont + Slippi on the Wii, enable the Slippi network feed, then connect S.M.A.R.T. to the Wii IP:51441.\nOptional: connect through a Slippi relay (often port 53741+).\n\nPROS:\n- Direct Wii / relay TCP (no Dolphin, no GPU/CPU on the SMART machine)\n- Native Python parser (no Node sidecar)\n- Rollback-safe stock and winner reporting\n- Supports Singles and limited Doubles\n\nCONS:\n- Wii nametags often lack Slippi Online display names\n- Console feed has no rollback; offline finalization is used",
   "discoverable": false,
   "defaultPort": 51441,
   "defaultVideogame": "ssbm",
-  "connectionType": "enet",
+  "connectionType": "tcp_raw",
   "characters": [
     "2",
     "3",
