@@ -1,7 +1,7 @@
 {
   "full_name": "Super Smash Bros. Melee",
   "enabled": true,
-  "providers": ["slippi", "slippi_dolphin"],
+  "providers": ["Slippi-Console", "Slippi-Dolphin"],
   "defaultMaxScore": 3,
   "startggId": 1,
   "characters": {
