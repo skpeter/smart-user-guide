@@ -1,0 +1,22 @@
+{
+  "full_name": "Avatar Legends: The Fighting Game",
+  "enabled": true,
+  "providers": ["SmartCV-Avatar"],
+  "defaultMaxScore": 2,
+  "startggId": 114292,
+  "characters": {
+    "3235": "Avatar State Aang",
+    "3236": "Azula",
+    "3237": "Korra",
+    "3238": "Nightmare Korra",
+    "3239": "Ozai",
+    "3240": "Zaheer",
+    "3241": "Aang",
+    "3242": "Katara",
+    "3243": "Kyoshi",
+    "3244": "Sokka",
+    "3245": "Toph",
+    "3246": "Zuko",
+    "": "Unknown"
+  }
+}

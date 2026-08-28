@@ -1,0 +1,10 @@
+{
+  "full_name": "MARVEL Tōkon: Fighting Souls",
+  "enabled": true,
+  "providers": ["SmartCV-Tokon"],
+  "defaultMaxScore": 2,
+  "startggId": null,
+  "characters": {
+    "": "Unknown"
+  }
+}
