@@ -1,0 +1,23 @@
+{
+  "download": "https://github.com/skpeter/SmartCV-Avatar",
+  "description": "SmartCV: Computer vision project that reads Avatar Legends: The Fighting Game footage from the game (if possible) or using OBS.\nDeveloped by Team Polygon\n\nPROS:\n- Does not require installation of mods on your game\n\nCONS:\n- Requires additional SmartCV app to run\n- Can be slightly inaccurate with detecting round ends\n- Player tags not OCR'd (character names from versus screen only)\n- Supports not reported",
+  "discoverable": true,
+  "defaultPort": 6565,
+  "defaultVideogame": "avatar",
+  "connectionType": "ws",
+  "characters": {
+    "Aang": 3241,
+    "Avatar State Aang": 3235,
+    "Azula": 3236,
+    "Katara": 3242,
+    "Korra": 3237,
+    "Kyoshi": 3243,
+    "Nightmare Korra": 3238,
+    "Ozai": 3239,
+    "Sokka": 3244,
+    "Toph": 3245,
+    "Zaheer": 3240,
+    "Zuko": 3246,
+    "": null
+  }
+}

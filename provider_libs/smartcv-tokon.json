@@ -1,0 +1,31 @@
+{
+  "download": "https://github.com/skpeter/SmartCV-Tokon",
+  "description": "SmartCV: Computer vision project that reads MARVEL Tōkon: Fighting Souls footage from the game (if possible) or using OBS.\nDeveloped by Team Polygon\n\nPROS:\n- Does not require installation of mods on your game\n\nCONS:\n- Requires additional SmartCV app to run\n- Can be slightly inaccurate with detecting round ends\n- Player tags not OCR'd yet\n- Team (4-char) reporting not wired yet; leader character only",
+  "discoverable": true,
+  "defaultPort": 6565,
+  "defaultVideogame": "tokon",
+  "connectionType": "ws",
+  "characters": {
+    "Storm": null,
+    "Magik": null,
+    "Wolverine": null,
+    "Danger": null,
+    "Spider-Man": null,
+    "Ms. Marvel": null,
+    "Star-Lord": null,
+    "Peni Parker": null,
+    "Captain America": null,
+    "Iron Man": null,
+    "Hulk": null,
+    "Black Panther": null,
+    "Doctor Doom": null,
+    "Magneto": null,
+    "Green Goblin": null,
+    "Carnage": null,
+    "Ghost Rider": null,
+    "Blade": null,
+    "Deadpool": null,
+    "Loki": null,
+    "None": null
+  }
+}
