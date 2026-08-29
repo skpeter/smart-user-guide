@@ -3,7 +3,7 @@
   "enabled": true,
   "providers": ["SmartCV-Tokon"],
   "defaultMaxScore": 2,
-  "startggId": null,
+  "startggId": 107706,
   "characters": {
     "": "Unknown"
   }
